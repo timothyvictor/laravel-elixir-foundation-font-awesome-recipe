@@ -3,7 +3,7 @@ An Elixir recipe for Foundation Framework. Be sure you've followed the instructi
 
 ## How to use
 
-First, you'll need to install foundation with bower to the `resources/assets` folder. After you've done that...
+First, you'll need to install Foundation, using Bower, to the `resources/assets` folder. After you've done that...
 
 * Download or clone this repository and copy the contents of gulpfile.js into your Laravel project's gulpfile.js
 * Run `gulp` from the terminal
