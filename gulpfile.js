@@ -13,27 +13,28 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix
-    // Copy the Foundaion folder from bower_components to a sass/foundation folder
+    /* Copy the Foundation folder from bower_components to a sass/foundation folder */
     .copy('resources/assets/bower_components/foundation/scss', 'resources/assets/sass/foundation')
     
-    // Compile the app.scss file to app.css
+    /* Compile the app.scss file to public/css/app.css */
     .sass('app.scss')
     
-    // Copy the Foundation JS folder from bower_components to a js/foundation folder
+    /* Copy the Foundation JS folder from bower_components to a js/foundation folder */
     .copy('resources/assets/bower_components/foundation/js', 'resources/assets/js/foundation')
     
-    // Copy the Modernizr.js library into it's own file
+    /* Copy the Modernizr.js library into it's own file at public/js/modernizr.js */
     .scripts('foundation/vendor/modernizr.js', 'public/js/modernizr.js', 'resources/assets/js')
     
-    // Compile/Merge all of the js files to app.js
+    /* Compile/Merge all of the js files to public/js/app.js */
 	.scripts([
+		/* Grab Fastclick.js and jQuery.js first */
 		'foundation/vendor/fastclick.js',
 		'foundation/vendor/jquery.js',
 		
-		/* Use the entire foundation JS library */
+		/* Use the entire Foundation JS library */
 		'foundation/foundation.js',
 		
-		/* Or Use JS components individually */
+		/* Or use Foundation JS components individually */
 		//'foundation/foundation/foundation.js',	
 		//'foundation/foundation/foundation.abide.js',
 		//'foundation/foundation/foundation.accordion.js',
@@ -54,8 +55,9 @@ elixir(function(mix) {
 		
 		/* Finally, include your custom javascript file */
 		'app.js'
+		
 	], 'public/js/app.js', 'resources/assets/js')
 	
-	// Setup a version of the app.css, app.js and modernizr.js files
+	/* Setup versioning for the app.css, app.js and modernizr.js files */
 	.version(["css/app.css", "js/app.js", 'js/modernizr.js']);
 });
