@@ -33,9 +33,9 @@ elixir(function(mix) {
     // Compile/Merge all of the js files to app.js
 	.scripts([
 		'jquery/dist/jquery.js',
-		/* User the entire foundation library */
+		/* Use the entire foundation JS library */
 		'foundation/foundation.js',
-		/* Or User components individually 
+		/* Or Use JS components individually 
 		'foundation/foundation/foundation.js',	
 		'foundation/foundation/foundation.abide.js',
 		'foundation/foundation/foundation.accordion.js',
