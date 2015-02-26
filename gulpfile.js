@@ -16,44 +16,43 @@ elixir(function(mix) {
     // Copy the Foundaion folder from bower_components to a sass/foundation folder
     .copy('resources/assets/bower_components/foundation/scss', 'resources/assets/sass/foundation')
     
-    // Copy the Foundation JS folder from bower_components to a js/foundation folder
-    .copy('resources/assets/bower_components/foundation/js', 'resources/assets/js/foundation')
-    
-    // Copy the jQuery folder from bower_components to a js/jquery folder
-    .copy('resources/assets/bower_components/jquery', 'resources/assets/js/jquery')
-    
-    // Copy the Modernizr folder from bower_components to a js/modernizr folder
-    .copy('resources/assets/bower_components/modernizr', 'resources/assets/js/modernizr')
-    
     // Compile the app.scss file to app.css
     .sass('app.scss')
     
-    .scripts('modernizr/modernizr.js', 'public/js/modernizr.js', 'resources/assets/js')
+    // Copy the Foundation JS folder from bower_components to a js/foundation folder
+    .copy('resources/assets/bower_components/foundation/js', 'resources/assets/js/foundation')
+    
+    // Copy the Modernizr.js library into it's own file
+    .scripts('foundation/vendor/modernizr.js', 'public/js/modernizr.js', 'resources/assets/js')
     
     // Compile/Merge all of the js files to app.js
 	.scripts([
-		'jquery/dist/jquery.js',
+		'foundation/vendor/fastclick.js',
+		'foundation/vendor/jquery.js',
+		
 		/* Use the entire foundation JS library */
 		'foundation/foundation.js',
-		/* Or Use JS components individually 
-		'foundation/foundation/foundation.js',	
-		'foundation/foundation/foundation.abide.js',
-		'foundation/foundation/foundation.accordion.js',
-		'foundation/foundation/foundation.alert.js',
-		'foundation/foundation/foundation.clearing.js',
-		'foundation/foundation/foundation.dropdown.js',
-		'foundation/foundation/foundation.equalizer.js',
-		'foundation/foundation/foundation.interchange.js',
-		'foundation/foundation/foundation.joyride.js',
-		'foundation/foundation/foundation.magellan.js',
-		'foundation/foundation/foundation.offcanvas.js',
-		'foundation/foundation/foundation.orbit.js',
-		'foundation/foundation/foundation.reveal.js',
-		'foundation/foundation/foundation.slider.js',
-		'foundation/foundation/foundation.tab.js',
-		'foundation/foundation/foundation.tooltip.js',
-		'foundation/foundation/foundation.topbar.js',
-		*/
+		
+		/* Or Use JS components individually */
+		//'foundation/foundation/foundation.js',	
+		//'foundation/foundation/foundation.abide.js',
+		//'foundation/foundation/foundation.accordion.js',
+		//'foundation/foundation/foundation.alert.js',
+		//'foundation/foundation/foundation.clearing.js',
+		//'foundation/foundation/foundation.dropdown.js',
+		//'foundation/foundation/foundation.equalizer.js',
+		//'foundation/foundation/foundation.interchange.js',
+		//'foundation/foundation/foundation.joyride.js',
+		//'foundation/foundation/foundation.magellan.js',
+		//'foundation/foundation/foundation.offcanvas.js',
+		//'foundation/foundation/foundation.orbit.js',
+		//'foundation/foundation/foundation.reveal.js',
+		//'foundation/foundation/foundation.slider.js',
+		//'foundation/foundation/foundation.tab.js',
+		//'foundation/foundation/foundation.tooltip.js',
+		//'foundation/foundation/foundation.topbar.js',
+		
+		/* Finally, include your custom javascript file */
 		'app.js'
 	], 'public/js/app.js', 'resources/assets/js')
 	
