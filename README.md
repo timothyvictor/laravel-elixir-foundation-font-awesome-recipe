@@ -12,3 +12,5 @@ First, you'll need to install Foundation, using Bower, to the `resources/assets`
 * Run `gulp` one more time
 
 That should do it!
+
+You can use app.scss file to choose which of the CSS components to import into your project and you can use gulpfile.js to chose which of the JS components to import into your project.
