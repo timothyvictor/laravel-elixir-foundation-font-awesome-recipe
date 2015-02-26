@@ -1,5 +1,5 @@
 # laravel-elixir-foundation-recipe
-An Elixir recipe for Foundation
+An Elixir recipe for Foundation Framework. Be sure you've followed the instructions in the Laravel documentation to get started with Elixir.
 
 ## How to use
 
