@@ -16,6 +16,9 @@ elixir(function(mix) {
   /* Compile the app.scss file to public/css/app.css */
   .sass('app.scss')
   
+  /* Copy the Foundation JS folder from bower_components to a js/foundation folder */
+  .copy('resources/assets/bower_components/foundation/js', 'resources/assets/js/foundation')
+  
   /* Copy the Modernizr.js library into it's own file at public/js/modernizr.js */
   .scripts('foundation/vendor/modernizr.js', 'public/js/modernizr.js', 'resources/assets/js')
   
