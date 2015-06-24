@@ -12,20 +12,14 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix
-    /* Copy the Foundation folder from bower_components to a sass/foundation folder */
-    .copy('bower_components/foundation/scss', 'resources/assets/sass/foundation')
-    
-    /* Compile the app.scss file to public/css/app.css */
-    .sass('app.scss')
-    
-    /* Copy the Foundation JS folder from bower_components to a js/foundation folder */
-    .copy('bower_components/foundation/js', 'resources/assets/js/foundation')
-    
-    /* Copy the Modernizr.js library into it's own file at public/js/modernizr.js */
-    .scripts('foundation/vendor/modernizr.js', 'public/js/modernizr.js', 'resources/assets/js')
-    
-    /* Compile/Merge all of the js files to public/js/app.js */
+  mix
+  /* Compile the app.scss file to public/css/app.css */
+  .sass('app.scss')
+  
+  /* Copy the Modernizr.js library into it's own file at public/js/modernizr.js */
+  .scripts('foundation/vendor/modernizr.js', 'public/js/modernizr.js', 'resources/assets/js')
+  
+  /* Compile/Merge all of the js files to public/js/app.js */
 	.scripts([
 		/* Grab Fastclick.js and jQuery.js first */
 		'foundation/vendor/fastclick.js',
