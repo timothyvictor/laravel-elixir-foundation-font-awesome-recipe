@@ -15,11 +15,11 @@ First, you'll need to install Foundation, using Bower, into resources/assets. Fr
 * Run `gulp` from the terminal.
 * Add this to the bottom of the main Layout file 
 
-@if ( env('APP_ENV') === 'development' )
+`@if ( env('APP_ENV') === 'development' )
 	<script type="text/javascript">
 		document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
 	</script> 
-@endif
+@endif`
 
 That should do it!
 
