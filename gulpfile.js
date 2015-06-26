@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+require('laravel-elixir-livereload');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,13 +15,13 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
   mix
   /* Compile the app.scss file to public/css/app.css */
-  .sass('app.scss')
+  .sass('app.scss', 'public/src/css/app.css')
   
   /* Copy the Foundation JS folder from bower_components to a js/foundation folder */
-  .copy('resources/assets/bower_components/foundation/js', 'resources/assets/js/foundation')
+  .copy('bower_components/foundation/js', 'resources/assets/js/foundation')
   
   /* Copy the Modernizr.js library into it's own file at public/js/modernizr.js */
-  .scripts('foundation/vendor/modernizr.js', 'public/js/modernizr.js', 'resources/assets/js')
+  .scripts('foundation/vendor/modernizr.js', 'public/src/js/modernizr.js', 'resources/assets/js')
   
   /* Compile/Merge all of the js files to public/js/app.js */
 	.scripts([
@@ -53,8 +54,11 @@ elixir(function(mix) {
 		/* Finally, include your custom javascript file */
 		'app.js'
 		
-	], 'public/js/app.js', 'resources/assets/js')
+	], 'public/src//js/app.js', 'resources/assets/js')
 	
 	/* Setup versioning for the app.css, app.js and modernizr.js files */
-	.version(["css/app.css", "js/app.js", 'js/modernizr.js']);
+	.version(["src/css/app.css", "src/js/app.js", 'src/js/modernizr.js'])
+	
+	/* Use Livereload to keep the browser refreshed */
+	.livereload();
 });
