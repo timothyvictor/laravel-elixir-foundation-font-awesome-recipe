@@ -48,12 +48,14 @@ bower install font-awesome -save
 * Add the `app.scss` and `_settings.scss` files from this repository into the `resources/assets/sass` directory (if it doesn't exist, then create it) in Laravel
 * Add the `app.js` file from this repository into the `resources/assets/js` directory (if it doesn't exist, then create it) in Laravel 
 * If you're using Livereload then uncomment the relevant line (.livereload();) in the gulpfile.js and add the follwing to the bottom of the main layout file:
+
 ```@if ( env('APP_ENV') === 'development' )
 	<script type="text/javascript">
 		document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
 	</script> 
 @endif
 ```
+
 * Add the following in your head tags:
 
 ```
