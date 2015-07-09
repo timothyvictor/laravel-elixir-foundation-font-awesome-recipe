@@ -1,4 +1,4 @@
-# laravel-elixir-foundation-recipe
+# laravel-elixir-foundation-font-awesome-recipe
 An Elixir recipe for Foundation Framework. Be sure you've followed the instructions in the Laravel documentation to get started with Elixir.
 
 Then install Livereload:
