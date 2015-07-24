@@ -19,7 +19,11 @@ Then cd into the root of your project and create a bower.json file and place the
 
 ```
 {
-  "name": "name-of-your-project"
+  "name": "name-of-your-project",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "fontawesome": "FortAwesome/Font-Awesome"
+  }
 }
 ```
 
@@ -31,16 +35,10 @@ next create a .bowerrc file and place the following in it to configure bower to 
 }
 ```
 
-Install Foundation:
+Install Foundation and Font-Awesome:
 
 ```
-bower install foundation —save
-```
-
-Install Font Awesome
-
-```
-bower install font-awesome -save
+bower install
 ```
 
 
