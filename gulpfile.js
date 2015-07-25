@@ -21,7 +21,7 @@ elixir(function(mix) {
   .copy('resources/assets/bower_components/foundation/js', 'resources/assets/js/foundation')
 
   /* Copy the Font Awesome fonts folder from bower_components to a fonts folder */
-  .copy('resources/assets/bower_components/font-awesome/fonts', 'public/fonts')
+  .copy('resources/assets/bower_components/fontawesome/fonts', 'public/fonts')
   
   /* Copy the Modernizr.js library into it's own file at public/js/modernizr.js */
   .scripts('foundation/vendor/modernizr.js', 'public/js/modernizr.js', 'resources/assets/js')

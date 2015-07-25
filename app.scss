@@ -52,7 +52,7 @@
 //@import '../bower_components/foundation/scss/foundation/components/visibility';
 
 /* Set the Font Awesome font path from the public/build/css folder */
-$fa-font-path:        "../../fonts";
+$fa-font-path:        "/fonts";
 
 /* Import font-awesome.scss */
 @import '../bower_components/fontawesome/scss/font-awesome';
